@@ -1,0 +1,1 @@
+C:\Users\kinga\source\repos\miniPaint\miniPaint\miniPaint.csproj;x86

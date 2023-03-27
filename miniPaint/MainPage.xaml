@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="miniPaint.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:miniPaint"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF7BF7FD">
+        <Canvas x:Name="poleRysowania" HorizontalAlignment="Left" Height="821" Margin="0,169,0,0" VerticalAlignment="Top" Width="917" Background="White" PointerPressed="poleRysowania_PointerPressed" PointerMoved="poleRysowania_PointerMoved" PointerReleased="poleRysowania_PointerReleased">
+        </Canvas>
+        <RadioButton x:Name="rdbProsta" Content="Prosta" Margin="1094,107,0,0" VerticalAlignment="Top" Checked="rdbProsta_Checked"/>
+        <RadioButton x:Name="rdbDowolna" Content="Dowolna" Margin="1094,169,0,0" VerticalAlignment="Top" Checked="rdbDowolna_Checked"/>
+        <StackPanel x:Name="spKolory" HorizontalAlignment="Left" Height="80" Width="20" VerticalAlignment="Top" PointerPressed="spKolory_PointerPressed">
+            <Rectangle Height="20" Width="20" Fill="Black" />
+            <Rectangle Height="20" Width="20" Fill="Red" />
+            <Rectangle Height="20" Width="20" Fill="Green" />
+            <Rectangle Height="20" Width="20" Fill="Blue" />
+        </StackPanel>
+        <Slider x:Name="sldGrubość" HorizontalAlignment="Left" Margin="120,40,0,0" VerticalAlignment="Top" Width="100" Minimum="1"  Maximum="50" Value="1" IsDirectionReversed="True" ValueChanged="sldGrubość_ValueChanged" />
+        <Button x:Name="btnUndo" Content="Cofnij"  Height="40" Width="90" Margin="1094,248,0,0"  VerticalAlignment="Top" Click="btnUndo_Click" />
+        <Button x:Name="btnExit" Content="Wyjdz"  Height="40" Width="90" Margin="1094,303,0,0"  VerticalAlignment="Top"  Click="BtnExit_Click"/>
+    </Grid>
+</Page>
